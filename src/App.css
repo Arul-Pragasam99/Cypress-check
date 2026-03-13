@@ -1,0 +1,18 @@
+/* Minimal styling for the dashboard wrapper.
+   The main layout is managed by components (Dashboard, StatCard, RecentActivity, etc.). */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, rgba(230, 238, 255, 1) 0%, rgba(255, 255, 255, 1) 60%);
+}
+
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}

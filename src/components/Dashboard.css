@@ -1,0 +1,237 @@
+.dashboard {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 36px 24px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.dashboard__header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.dashboard__title {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+.dashboard__subtitle {
+  margin: 8px 0 0;
+  color: var(--text);
+  max-width: 620px;
+}
+
+.dashboard__meta {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.dashboard__metaItem {
+  text-align: right;
+}
+
+.dashboard__metaLabel {
+  font-size: 0.8rem;
+  color: var(--text);
+  display: block;
+}
+
+.dashboard__metaValue {
+  font-weight: 600;
+  display: block;
+}
+
+.dashboard__refresh {
+  background: var(--accent);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.dashboard__refresh:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+.dashboard__stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.dashboard__content {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 22px;
+}
+
+.dashboard__activityPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dashboard__activityToolbar {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.dashboard__filterLabel {
+  font-size: 0.9rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.dashboard__filterInput {
+  flex: 1 1 180px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 0.95rem;
+}
+
+.dashboard__actionButton {
+  background: #2f80ed;
+  border: none;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.dashboard__actionButton:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+.dashboard__chart {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 18px 18px 24px;
+  box-shadow: var(--shadow);
+}
+
+.dashboard__chartHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 18px;
+}
+
+.dashboard__chartSub {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.sparkline {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  height: 120px;
+  padding: 10px 4px 4px;
+}
+
+.sparkline__bar {
+  flex: 1 1 0;
+  background: linear-gradient(180deg, var(--accent) 0%, rgba(170, 59, 255, 0.6) 100%);
+  border-radius: 6px;
+  transition: transform 0.15s ease;
+}
+
+.sparkline__bar:hover {
+  transform: scaleY(1.05);
+}
+
+.activity {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+.activity__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 16px;
+}
+
+.activity__header h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.activity__tableWrapper {
+  overflow-x: auto;
+}
+
+.activity__table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 520px;
+}
+
+.activity__table th,
+.activity__table td {
+  padding: 12px 14px;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.activity__table th {
+  color: var(--text);
+  opacity: 0.9;
+  font-weight: 500;
+  border-bottom: 1px solid var(--border);
+}
+
+.activity__table tbody tr:hover {
+  background: rgba(170, 59, 255, 0.06);
+}
+
+.activity__status {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.activity__status--success {
+  background: rgba(59, 197, 123, 0.15);
+  color: #2c7a46;
+}
+
+.activity__status--warning {
+  background: rgba(244, 170, 43, 0.16);
+  color: #b66900;
+}
+
+.activity__status--error {
+  background: rgba(219, 39, 64, 0.13);
+  color: #8e1f2f;
+}
+
+@media (max-width: 960px) {
+  .dashboard__content {
+    grid-template-columns: 1fr;
+  }
+}
